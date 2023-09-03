@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+
+<div style="width:80%; margin : auto; padding:20px;"> 
+  
+  <div style="width:50%; margin:auto; padding:20px;"></div>
+<h1>Search result</h1>
+{% if post %}
+<table class="table table-info">
+  <thead>
+    
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Category</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    {% for item in post %}
+     <tr>
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.book_name}}</td>
+      <td>{{item.author}}</td>
+      <td>{{item.category}}</td>
+    </tr>
+
+    {% endfor %}
+   
+   {% else %}
+   <h1>No Sarch Result Found</h1>
+   {% endif %}
+  </tbody>
+</table>
+
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+
+</div><!-- container // -->
+</section>
+
+{% endblock %}

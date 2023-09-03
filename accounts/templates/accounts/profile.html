@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<section class="section-intro padding-y-sm">
+<div class="container">
+
+<h1>Your Information </h1>
+{% comment %} <div class="intro-banner-wrap">
+	<img src="{% static 'images/banners/2.jpg' %}" class="img-fluid rounded">
+</div> {% endcomment %}
+
+
+<section style="background-color: #eee;">
+  <div class="container py-5">
+   
+
+    <div class="row">
+      <div class="col-lg-4">
+      
+       
+      </div>
+      <div style="width:80%; margin : auto; padding:20px;"> 
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Full Name</p>
+                
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{user.first_name}} {{user.last_name}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{user.email}}</p>
+              </div>
+            </div>
+           
+        
+           
+           
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
